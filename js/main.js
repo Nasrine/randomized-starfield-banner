@@ -1,5 +1,6 @@
 var $body = $('.banner');
-var $star = $('.banner');
+var i = 0;
+var $star = 75;
 var width = $body.outerWidth();
 var height = $body.outerHeight();
 
