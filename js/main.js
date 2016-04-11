@@ -1,18 +1,20 @@
-var $body = $('.banner');
+var $banner = $('.banner');
+var width = $banner.outerWidth();
+var height = $banner.outerHeight();
 var i = 0;
 var $star = 75;
-var width = $body.outerWidth();
-var height = $body.outerHeight();
+var $newstar;
 
-for (1= 0; i < 75; i++) {
-  $star = $('<div>');
-  $star.addClass('star');
-  $star.css({
+for (i= 0; i < 75; i++) {
+  $newstar = $('<div>');
+  $newstar.addClass('star');
+
+  $newstar.css({
     top: Math.random() * height,
     left: Math.random() * width,
-    opacity: Math.random(),
     transform: 'rotate(' + Math.random() * 360 + 'deg) scale(' + Math.random() + ')',
+    opacity: Math.random()
   });
-  $body.append($star);
+  $banner.append($newstar);
 }
 
